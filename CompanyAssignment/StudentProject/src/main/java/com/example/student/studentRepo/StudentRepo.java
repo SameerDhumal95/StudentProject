@@ -7,6 +7,6 @@ import com.example.student.entity.Student;
 
 public interface StudentRepo extends JpaRepository<Student, Integer>{
 
-//	@Query("SELECT s FROM student s WHERE s.username = ?1 and s.password = ?2")
-//	public Student findByUsernameAndPassword(String username,String password);
+	@Query("SELECT s FROM Student s WHERE s.Username = ?1 and s.Password = ?2")
+	public Student findByUsernameAndPassword(String username,String password);
 }

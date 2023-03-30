@@ -11,5 +11,5 @@ public interface StudentService {
 	
 	public Student createStudent(Student cc);
 
-	//public Student getByUsernameAndPassword(String username,String password);
+	public Student getByUsernameAndPassword(String username,String password);
 }

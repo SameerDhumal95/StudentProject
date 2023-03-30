@@ -38,17 +38,17 @@ public class StudentController {
 					return this.service.getStudents();
 				}
 	
-//		//For page login
-//		@PostMapping("/login")
-//		public ResponseEntity<Student> signIn(@RequestBody UserInfo user) {
-//			Student cc=this.service.getByUsernameAndPassword(user.getUsername(), user.getPassword());
-//			if(cc!=null) {
-//				return new ResponseEntity<Student>(cc, HttpStatus.ACCEPTED);
-//			}else {
-//				return new ResponseEntity<Student>(cc, HttpStatus.BAD_REQUEST);
-//			}
-//		}
-//		
+	//For page login
+		@PostMapping("/login")
+		public ResponseEntity<Student> signIn(@RequestBody UserInfo user) {
+			Student cc=this.service.getByUsernameAndPassword(user.getUsername(), user.getPassword());
+			if(cc!=null) {
+				return new ResponseEntity<Student>(cc, HttpStatus.ACCEPTED);
+			}else {
+				return new ResponseEntity<Student>(cc, HttpStatus.BAD_REQUEST);
+			}
+		}
+		
 		
       //get max marks < 80 logic
 		

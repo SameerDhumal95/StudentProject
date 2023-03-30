@@ -27,10 +27,10 @@ public class StudentServiceImpl implements StudentService{
 		return student;
 	}
 
-//	@Override
-//	public Student getByUsernameAndPassword(String username,String password) {
-//		return this.studentRepo.findByUsernameAndPassword(username,password);
-//	} 
+	@Override
+	public Student getByUsernameAndPassword(String username,String password) {
+		return this.studentRepo.findByUsernameAndPassword(username,password);
+	} 
 
 	
 }

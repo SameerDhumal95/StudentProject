@@ -32,7 +32,7 @@ public class Student {
 	
 	private int Marks;
 	
-	@Column(unique = true)
+	@Column()
 	@NotEmpty(message = "Field must not be null")
 	String Username;
 	
