@@ -1,0 +1,28 @@
+package com.example.student.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.student.entity.Student;
+import com.example.student.service.StudentService;
+import com.example.student.studentRepo.StudentRepo;
+
+public class StudentServiceImpl implements StudentService{
+
+	@Autowired
+	private StudentRepo studentRepo;
+
+	@Override
+	public List<Student> getStudents() {
+		return studentRepo.findAll();
+	}
+
+	@Override
+	public Student addStudent(Student s) {
+		
+	Student student = studentRepo.save(s);
+		return student;
+	}
+
+}
