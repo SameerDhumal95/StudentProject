@@ -1,0 +1,13 @@
+package com.example.student.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.student.entity.Student;
+
+public interface StudentRepo extends JpaRepository<Student, Integer>{
+
+	
+	@Query("SELECT u FROM student u WHERE u.username = ?1 and u.password = ?2")
+	public Student findByUsernamePassword(String username,String password);
+}

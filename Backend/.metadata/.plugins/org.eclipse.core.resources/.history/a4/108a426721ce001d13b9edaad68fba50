@@ -1,0 +1,19 @@
+package com.example.student.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "student")
+
+public class Student {
+
+	
+	private int rollNo;
+	
+	private String name;
+	
+	private int marks;
+	
+	
+}
