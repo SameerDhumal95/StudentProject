@@ -1,5 +1,0 @@
-package com.example.student.services;
-
-public interface StudentRepo extends J{
-
-}
